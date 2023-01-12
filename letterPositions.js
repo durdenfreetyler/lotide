@@ -1,10 +1,10 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
+function assertArraysEqual(actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅✅`);
   } else {
     console.log(`❌❌❌❌`);
   }
-};
+}
 
 function eqArrays(array1, array2) {
   let answer = true;
@@ -42,7 +42,7 @@ const letterPositions = function (sentence) {
 console.log(letterPositions("hello"));
 
 const result = letterPositions("hello");
-assertEqual(result.l, [2, 3]);
+assertArraysEqual(letterPositions("hello").e, [1]);
 
 // Instruction
 // Write a test with a small string (eg: "hello")
