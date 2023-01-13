@@ -1,3 +1,11 @@
+const assertEqual = function (actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅✅`);
+  } else {
+    console.log(`❌❌❌❌`);
+  }
+};
+
 const findKey = function (obj, callback) {
   const keys = Object.keys(obj);
 
@@ -23,3 +31,5 @@ const result = findKey(
 ); // => "noma"
 
 console.log(result);
+
+console.log(assertEqual(result, "noma"));
