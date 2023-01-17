@@ -1,22 +1,4 @@
-function assertArraysEqual(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅✅`);
-  } else {
-    console.log(`❌❌❌❌`);
-  }
-}
 
-function eqArrays(array1, array2) {
-  let answer = true;
-
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[i]) {
-    } else {
-      answer = false;
-    }
-  }
-  return answer;
-}
 
 function middle(array) {
   // create variable to hold empty array
@@ -40,16 +22,26 @@ function middle(array) {
     // [Math.floor(array.length / 2)]
   }
 }
-let jones = [1];
-let bill = [3, 4];
-middle([2, 1]);
-middle([2, 1, 1]);
 
-middle([2, 1, 3, 4]);
-middle([2, 1, 3, 4, 4]);
-middle([2, 1, 3, 4, 4, 6]);
-assertArraysEqual(jones, [1]);
-assertArraysEqual(bill, [3, 4]);
+module.exports = middle
+
+
+
+
+
+
+
+
+// let jones = [1];
+// let bill = [3, 4];
+// middle([2, 1]);
+// middle([2, 1, 1]);
+
+// middle([2, 1, 3, 4]);
+// middle([2, 1, 3, 4, 4]);
+// middle([2, 1, 3, 4, 4, 6]);
+// assertArraysEqual(jones, [1]);
+// assertArraysEqual(bill, [3, 4]);
 
 // middle function should return an array
 // create array []?

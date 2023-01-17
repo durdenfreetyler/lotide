@@ -1,28 +1,34 @@
-function eqArrays(array1, array2) {
-  let answer = true;
+// const eqArrays = function (arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < arr1.length; i++) {
+//     const element1 = arr1[i];
+//     const element2 = arr2[i];
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[i]) {
-    } else {
-      answer = false;
-    }
-  }
-  return answer;
-}
+//     if (element1 !== element2) {
+//       return false;
+//     }
+//     return true;
+//   }
+// };
 // if ('false')
 //    if (false)
+const eqArrays = require("./eqArrays");
 
 function assertArraysEqual(actual, expected) {
   if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅✅`);
+    console.log(`✅✅✅✅ asseration passed ${actual} === ${expected}`);
   } else {
-    console.log(`❌❌❌❌`);
+    console.log(`❌❌❌❌ asseration failed ${actual} !== ${expected}`);
   }
 }
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqual([1, 2, 1], [3, 2, 1]); // => false
+module.exports = assertArraysEqual;
 
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => fal
+// assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+// assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+// assertArraysEqual([1, 2, 1], [3, 2, 1]); // => false
+
+// assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
+// assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => fal

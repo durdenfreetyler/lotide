@@ -30,15 +30,17 @@ const letterPositions = function (sentence) {
 
     if (results[letter]) {
       results[letter].push(i);
+      // console.log("results[letter].push(i)", results[letter].push(i));
     } else {
       results[letter] = [i];
+      // console.log("results[letter] = [i]", (results[letter] = [i]));
     }
   }
 
   return results;
 };
 
-// console.log(letterPositions("lighthouse in the house"));
+console.log(letterPositions("lighthouse in the house"));
 console.log(letterPositions("hello"));
 
 const result = letterPositions("hello");

@@ -18,11 +18,13 @@ function countLetters(string) {
     // results[letter];
     // console.log("results[letter]", results[letter]);
   }
-  console.log(results);
+  
+  return results
 }
 
-countLetters("lighthouse in the house");
-
+console.log(countLetters("lighthouse in the house"));
+const result = countLetters("lighthouse in the house");
+assertEqual(result.h, 4)
 // {
 //   l: 1,
 //   i: 2,
